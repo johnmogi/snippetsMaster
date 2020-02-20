@@ -1,0 +1,1 @@
+INSERT INTO `receps` (`recepCode`, `recepId`, `userName`, `recepIngred`, `recepRep`, `recepName`) VALUES ('1', '1', 'Johnny 5', 'Olives, Cheese, red tomatoes', 'make dough, put in oven', 'biggus greekus');
