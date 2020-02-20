@@ -1,11 +1,14 @@
-{DB} 
+{DB:utf8_gen_ci} 
+[Linux bug: prevent by making all fields lowercase]
 1. utf8 general bin
 2. id _ primary ai / re
-3. review id as index id index / restId as primary
+3. review id as index id index
+ / restId as primary + null as default + null checkbox
+ [take notice, second primary not AI not Null]
 4. attach id on designer 5.add data manually
 
 {SERVER}
-1. build server folder
+1. mkdir server + cd server
 2. app.js
 3. npm init -y
 4. npm i express mysql cors joi
@@ -110,7 +113,7 @@ async function addReviewAsync(review) {
     review.id = info.insertId;
     return review;
 }
-14.  MAKE sure strings are marked with single quote- or it wont post:  
+14.  MAKE sure strings are marked with single quote- or it won't post:  
 async function addReviewAsync(review) {
     const sql = `INSERT INTO reviews(restCode,date, visitor, review) VALUES(${review.restCode},'${review.date}','${review.visitor}','${review.review}')`;
     const info = await dal.executeAsync(sql);

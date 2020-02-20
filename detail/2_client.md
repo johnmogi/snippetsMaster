@@ -17,7 +17,7 @@ npm i react-router-dom @types/react-router-dom
 
 npm i -g json-server מתקין שרת ע"מ לבצע בדיקות מקומיות
 
-json-server products.json --port 3015
+<!-- json-server products.json --port 3015 -->
 
 nav>.navbar-brand>a.navbar-item>img 
 
